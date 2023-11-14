@@ -1,7 +1,7 @@
 #include <array>
 #include <iostream>
 
-void search(std::array<int, 5> arr, int num) {
+void search(std::array<int, 5>& arr, int num) {
 
     
     for (int i=0; i < arr.size(); i++) {

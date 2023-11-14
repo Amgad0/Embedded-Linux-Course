@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-int findmax(std::array<int, 5> arr) {
+int findmax(std::array<int, 5>& arr) {
 
     int max = 0;
     for (int i=0; i < arr.size(); i++) {
