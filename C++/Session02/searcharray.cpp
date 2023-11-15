@@ -1,17 +1,18 @@
 #include <array>
 #include <iostream>
+#include <algorithm>
 
-void search(std::array<int, 5>& arr, int num) {
+void search(std::array<int, 5>& arr, int searchValue) {
 
-    
-    for (int i=0; i < arr.size(); i++) {
-        if (arr[i] == num) {
+    auto result = std::find(arr.begin(), arr.end(), searchValue);
 
-            std::cout << "Number exists with index:  " << i << std::endl;
-            return;
-        }
+    if (result != arr.end()) {
+        std::cout << "Element is found at index: " << std::distance(arr.begin(), result) << std::endl;
+    } else {
+        std::cout << "Element not found" << std::endl;
     }
-    std::cout << "Number " << num << " doesn't exist in the array." << std::endl;
+
+
 }
 
 int main() {
